@@ -28,8 +28,7 @@ app.use(express.static('public'));
 //application will be using urlencoded form data
 app.use(express.urlencoded({ extended: true })); 
 
-const env = require("dotenv");
-env.config();
+require("dotenv").config(); 
 
 // Initialize legoData and start server
 legoData.initialize().then(() => {
